@@ -1,0 +1,114 @@
+//colors
+$inactiveBorderColor: rgb(215, 218, 219);
+$activeBorderColor: rgb(102, 201, 176);
+$backgroundColor: rgb(250, 253, 255);
+$formBackgroundColor: rgb(250, 252, 253);
+//
+
+//fonts
+$mainFont: 'Open Sans', sans-serif;
+//
+
+//font-size
+$mainFontSize: 20px;
+$inputFontSize: 18px;
+//
+
+//borders
+$outlineBorder: 3px solid rgba(108, 180, 152, 0.5);
+//
+
+//border-radius
+$elemBorderRadius: 0.3rem;
+//
+
+//padding-margin
+$elemPadMarg: 0.5rem;
+//
+
+//width
+$formElemWidth: 17rem;
+//
+
+.flexBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginBlock {
+  height: 100vh;
+  background-color: $backgroundColor;
+  font-family: $mainFont;
+  // .hospitalName {
+  //   color: $activeBorderColor;
+  //   font-style: italic;
+  //   font-size: 3rem;
+  //   height: 30%;
+  //   display: flex;
+  //   align-items: center;
+  // }
+  .formBlock {
+    // height: 70%;
+    form {
+      border: 2px solid $activeBorderColor;
+      width: 20rem;
+      height: 19rem;
+      background-color: $formBackgroundColor;
+      border-radius: $elemBorderRadius;
+      outline: $outlineBorder;
+      box-shadow: 0 0 20px $activeBorderColor;
+      input {
+        width: $formElemWidth;
+        font-size: $inputFontSize;
+        padding: $elemPadMarg;
+        margin: $elemPadMarg;
+        border: 0.1rem solid $inactiveBorderColor;
+        border-radius: $elemBorderRadius;
+        outline-color: $formBackgroundColor;
+        &:hover {
+          border-color: $activeBorderColor;
+          transition: border-color 500ms;
+        }
+        &:focus {
+          border-color: $activeBorderColor;
+          outline: $outlineBorder;
+          transition: outline-color 500ms, border-color 500ms;
+        }
+        &:not(:focus) {
+          transition: border-color 500ms;
+        }
+      }
+      button {
+        padding: $elemPadMarg;
+        margin: $elemPadMarg;
+        font-size: $mainFontSize;
+        width: $formElemWidth;
+        border-radius: $elemBorderRadius;
+        background-color: $activeBorderColor;
+        border: none;
+        color: white;
+        &:hover {
+          cursor: pointer;
+        }
+        &:active {
+          outline: $outlineBorder;
+          transition: outline-color 300ms;
+        }
+      }
+      .enterDataText {
+        padding: 1.5rem 0;
+        font-size: $mainFontSize;
+        font-weight: bolder;
+        color: $activeBorderColor;
+      }
+      .errorField {
+        font-size: 0.75rem;
+        color: red;
+        display: flex;
+        width: $formElemWidth;
+      }
+    }
+  }
+}

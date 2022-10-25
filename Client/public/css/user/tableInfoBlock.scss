@@ -1,0 +1,52 @@
+//colors
+$inactiveBorderColor: rgb(215, 218, 219);
+$activeBorderColor: rgb(102, 201, 176);
+$backgroundColor: rgb(250, 253, 255);
+$formBackgroundColor: rgb(250, 252, 253);
+//
+
+//fonts
+$mainFont: 'Open Sans', sans-serif;
+//
+
+//font-size
+$mainFontSize: 20px;
+$inputFontSize: 18px;
+//
+
+//borders
+$outlineBorder: 3px solid rgba(108, 180, 152, 0.5);
+//
+
+//border-radius
+$elemBorderRadius: 0.3rem;
+//
+
+//padding-margin
+$elemPadMarg: 0.5rem;
+//
+
+//width
+$formElemWidth: 17rem;
+//
+
+.tableInfoBlock {
+  table,
+  td,
+  th {
+    border: 0.1rem solid $inactiveBorderColor;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  table {
+    td,
+    th {
+      width: 20vw;
+      height: 7vh;
+    }
+    th {
+      color: $activeBorderColor;
+    }
+  }
+}

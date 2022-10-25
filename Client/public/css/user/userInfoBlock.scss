@@ -1,0 +1,101 @@
+//colors
+$inactiveBorderColor: rgb(215, 218, 219);
+$activeBorderColor: rgb(102, 201, 176);
+$backgroundColor: rgb(250, 253, 255);
+$formBackgroundColor: rgb(250, 252, 253);
+$deleteButtonColor: rgb(201, 102, 102);
+//
+
+//fonts
+$mainFont: 'Open Sans', sans-serif;
+//
+
+//font-size
+$mainFontSize: 20px;
+$inputFontSize: 18px;
+//
+
+//borders
+$outlineBorder: 3px solid rgba(108, 180, 152, 0.5);
+//
+
+//border-radius
+$elemBorderRadius: 0.3rem;
+//
+
+//padding-margin
+$elemPadMarg: 0.5rem;
+//
+
+//width
+$formElemWidth: 17rem;
+//
+.userInfoBlock {
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+  //padding-right: 13rem;
+  table {
+    margin: auto;
+    tr {
+      td {
+        padding: 0.2rem;
+        label {
+          color: $activeBorderColor;
+          font-family: $mainFont;
+          font-size: 1.5rem;
+          font-weight: 800;
+          float: right;
+        }
+        input,
+        select,
+        textarea {
+          font-size: $inputFontSize;
+          padding: $elemPadMarg;
+          border: 0.1rem solid $inactiveBorderColor;
+          border-radius: $elemBorderRadius;
+          outline-color: $formBackgroundColor;
+          width: 30rem;
+          &:hover {
+            border-color: $activeBorderColor;
+            transition: border-color 500ms;
+          }
+          &:focus {
+            border-color: $activeBorderColor;
+            outline: $outlineBorder;
+            transition: outline-color 500ms, border-color 500ms;
+          }
+          &:not(:focus) {
+            transition: border-color 500ms;
+          }
+        }
+        button {
+          padding: $elemPadMarg;
+          margin: $elemPadMarg;
+          font-size: $mainFontSize;
+          border-radius: $elemBorderRadius;
+          background-color: $activeBorderColor;
+          border: none;
+          float: right;
+          color: white;
+          &:hover {
+            cursor: pointer;
+          }
+          &:active {
+            outline: $outlineBorder;
+            transition: outline-color 300ms;
+          }
+        }
+        button.deleteButton {
+          background-color: $deleteButtonColor;
+        }
+        .errorField {
+          font-size: 0.85rem;
+          color: red;
+          display: flex;
+          font-family: $mainFont;
+        }
+      }
+    }
+  }
+}

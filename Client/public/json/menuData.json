@@ -1,0 +1,96 @@
+{
+  "headdoctor": {
+    "mypage": { "name": "Моя сторінка", "link": "/headdoctor/me" },
+    "hospital": { "name": "Поліклініка", "link": "/headdoctor/hospital" },
+    "add": {
+      "header": { "name": "Додати" },
+      "headofdepartments": {
+        "name": "завідувачів відділеннями",
+        "link": "/headdoctor/add/headofdepartment"
+      },
+      "specialties": {
+        "name": "спеціальності",
+        "link": "/headdoctor/add/specialty"
+      }
+    },
+    "assignHeadOfDepartment": {
+      "name": "Назначити завідувача відділенням",
+      "link": "/headdoctor/assignHeadOfDepartment"
+    },
+    "show": {
+      "header": { "name": "Переглянути" },
+      "headofdepartments": {
+        "name": "завідувачів відділеннями",
+        "link": "/headdoctor/show/headsofdepartments"
+      },
+      "departments": {
+        "name": "відділення",
+        "link": "/headdoctor/show/departments"
+      }
+    },
+    "logoff": { "name": "Вихід", "link": "/logoff" }
+  },
+  "headofdepartment": {
+    "mypage": { "name": "Моя сторінка", "link": "/headofdepartment/me" },
+    "hospital": {
+      "name": "Відділення",
+      "link": "/headofdepartment/department"
+    },
+    "add": {
+      "header": { "name": "Додати" },
+      "doctors": {
+        "name": "лікаря",
+        "link": "/headofdepartment/add/doctor"
+      }
+    },
+    "show": {
+      "header": { "name": "Переглянути" },
+      "headofdepartments": {
+        "name": "лікарів",
+        "link": "/headofdepartment/show/doctors"
+      }
+    },
+    "logoff": { "name": "Вихід", "link": "/logoff" }
+  },
+  "doctor": {
+    "mypage": { "name": "Моя сторінка", "link": "/doctor/me" },
+    "add": {
+      "header": { "name": "Додати" },
+      "patients": {
+        "name": "пацієнта",
+        "link": "/doctor/add/patient"
+      }
+    },
+    "assignTreatment": {
+      "name": "Назначити лікування",
+      "link": "/doctor/assignTreatment"
+    },
+    "show": {
+      "header": { "name": "Переглянути" },
+      "patients": {
+        "name": "пацієнтів",
+        "link": "/doctor/show/patients"
+      },
+      "historyofillnesses": {
+        "name": "історію хвороб пацієнта",
+        "link": "/doctor/show/historyOfIllnesses"
+      }
+    },
+    "logoff": { "name": "Вихід", "link": "/logoff" }
+  },
+  "patient": {
+    "mypage": { "name": "Моя сторінка", "link": "/patient/me" },
+    "show": {
+      "header": { "name": "Переглянути" },
+      "patients": {
+        "name": "поточне лікування",
+        "link": "/patient/show/currentTreatment"
+      },
+      "historyofillnesses": {
+        "name": "історію хвороб",
+        "link": "/patient/show/historyOfIllnesses"
+      }
+    },
+    "logoff": { "name": "Вихід", "link": "/logoff" }
+  }
+}

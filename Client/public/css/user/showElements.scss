@@ -1,0 +1,144 @@
+//colors
+$inactiveBorderColor: rgb(215, 218, 219);
+$activeBorderColor: rgb(102, 201, 176);
+$backgroundColor: rgb(250, 253, 255);
+$formBackgroundColor: rgb(250, 252, 253);
+$deleteButtonColor: rgb(201, 102, 102);
+
+//
+
+//fonts
+$mainFont: 'Open Sans', sans-serif;
+//
+
+//font-size
+$mainFontSize: 20px;
+$inputFontSize: 18px;
+//
+
+//borders
+$outlineBorder: 3px solid rgba(108, 180, 152, 0.5);
+//
+
+//border-radius
+$elemBorderRadius: 0.3rem;
+//
+
+//padding-margin
+$elemPadMarg: 0.5rem;
+//
+
+//width
+$formElemWidth: 17rem;
+//
+
+.header {
+  color: $activeBorderColor;
+  font-weight: 600;
+  font-family: $mainFont;
+}
+
+.searchBlock {
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div {
+    padding: 0.3rem;
+    table {
+      td {
+        text-align: right;
+        select {
+          width: 11.5rem;
+        }
+      }
+    }
+  }
+}
+
+input,
+select {
+  font-size: $inputFontSize;
+  padding: $elemPadMarg;
+  border: 0.1rem solid $inactiveBorderColor;
+  border-radius: $elemBorderRadius;
+  outline-color: $formBackgroundColor;
+  width: 40rem;
+  &:hover {
+    border-color: $activeBorderColor;
+    transition: border-color 500ms;
+  }
+  &:focus {
+    border-color: $activeBorderColor;
+    outline: $outlineBorder;
+    transition: outline-color 500ms, border-color 500ms;
+  }
+  &:not(:focus) {
+    transition: border-color 500ms;
+  }
+}
+
+.searchResultInfo {
+  width: 41rem;
+  margin-bottom: 1rem;
+}
+
+.searchResultBlock {
+  overflow-y: auto;
+  overflow-x: hidden;
+  .listElement {
+    border: 2px solid $activeBorderColor;
+    width: 45rem;
+    height: fit-content;
+    background-color: $formBackgroundColor;
+    border-radius: $elemBorderRadius;
+    outline: $outlineBorder;
+    box-shadow: 0 0 20px $activeBorderColor;
+    margin: 2rem;
+    padding: 1rem;
+    font-family: $mainFont;
+    .elementName {
+      border-bottom: 3px solid $activeBorderColor;
+      font-size: 1.5rem;
+    }
+    button {
+      border: none;
+      background-color: transparent;
+      float: right;
+      .elementIcon {
+        font-size: 1.8rem;
+        color: $inactiveBorderColor;
+        &:hover {
+          color: $activeBorderColor;
+          transition: color 400ms;
+          cursor: pointer;
+        }
+        &:active {
+          color: rgba(102, 201, 176, 0.5);
+          transition: color 400ms;
+          cursor: pointer;
+        }
+      }
+      .deleteIcon {
+        &:hover {
+          color: $deleteButtonColor;
+          transition: color 400ms;
+          cursor: pointer;
+        }
+        &:active {
+          color: rgba(201, 102, 102, 0.5);
+          transition: color 400ms;
+          cursor: pointer;
+        }
+      }
+    }
+    .elementData {
+      margin: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      div {
+        margin: 0.5rem;
+      }
+    }
+  }
+}
